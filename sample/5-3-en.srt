@@ -1,0 +1,1875 @@
+﻿1
+00:00:02,070 --> 00:00:03,920
+Welcome back, folks,
+to the last section
+
+2
+00:00:03,920 --> 00:00:05,744
+of the Plains of Prototypes.
+
+3
+00:00:05,744 --> 00:00:08,035
+Hope you had a great time
+with all of those challenges.
+
+4
+00:00:08,035 --> 00:00:09,790
+And weren't they a doozy?
+
+5
+00:00:09,790 --> 00:00:10,480
+Yeah.
+
+6
+00:00:10,480 --> 00:00:15,350
+Let's turn to our next topic,
+useful properties in the object
+
+7
+00:00:15,350 --> 00:00:17,040
+prototype.
+
+8
+00:00:17,040 --> 00:00:20,370
+Yeah, remember all of those
+cool object prototype properties
+
+9
+00:00:20,370 --> 00:00:22,470
+that we saw at the
+beginning of this level?
+
+10
+00:00:22,470 --> 00:00:25,430
+We're going to examine and
+use a few of those now.
+
+11
+00:00:25,430 --> 00:00:28,200
+First one we're going to look
+at is the value of property.
+
+12
+00:00:28,200 --> 00:00:29,900
+Let's say we had two
+variables, x and y.
+
+13
+00:00:29,900 --> 00:00:31,720
+One gets assigned 4.
+
+14
+00:00:31,720 --> 00:00:35,090
+And the other gets
+assigned the string 4.
+
+15
+00:00:35,090 --> 00:00:38,580
+If we call x.value Of(),
+we'll get that property from
+
+16
+00:00:38,580 --> 00:00:42,130
+the object prototype, and we
+get a 4 back, as a result.
+
+17
+00:00:42,130 --> 00:00:48,150
+If we call y.value Of(), we will
+also get the string 4 back.
+
+18
+00:00:48,150 --> 00:00:50,700
+Now, why are we trying to
+differentiate between these two
+
+19
+00:00:50,700 --> 00:00:51,980
+pretty obvious things?
+
+20
+00:00:51,980 --> 00:00:54,500
+We just want to make sure
+you know that the value
+
+21
+00:00:54,500 --> 00:00:57,750
+in value Of() isn't looking
+for numbers, necessarily,
+
+22
+00:00:57,750 --> 00:01:02,430
+but instead returns whatever
+primitive type is associated
+
+23
+00:01:02,430 --> 00:01:03,100
+with the object.
+
+24
+00:01:03,100 --> 00:01:06,120
+That's going to come
+in handy, pretty soon.
+
+25
+00:01:06,120 --> 00:01:10,200
+Now, if we try to
+compare x.value Of() equal
+
+26
+00:01:10,200 --> 00:01:14,110
+to y.value Of(), we get a true.
+
+27
+00:01:14,110 --> 00:01:15,370
+Why is that?
+
+28
+00:01:15,370 --> 00:01:17,010
+We need to be careful here.
+
+29
+00:01:17,010 --> 00:01:20,480
+That's because the double equal
+sign tries to help us out,
+
+30
+00:01:20,480 --> 00:01:25,390
+tries to be our friend by
+using type coercion which turns
+
+31
+00:01:25,390 --> 00:01:30,680
+a number contained within a
+string into that actual number.
+
+32
+00:01:30,680 --> 00:01:33,480
+So here, the 4 that
+was in a string
+
+33
+00:01:33,480 --> 00:01:36,860
+actually got turned
+into the number 4.
+
+34
+00:01:36,860 --> 00:01:38,590
+And so the double
+equal sign said,
+
+35
+00:01:38,590 --> 00:01:41,330
+yes, these things
+are exactly the same.
+
+36
+00:01:41,330 --> 00:01:42,510
+But we didn't want that.
+
+37
+00:01:42,510 --> 00:01:44,980
+Sometimes you might,
+but not this time.
+
+38
+00:01:44,980 --> 00:01:48,040
+So why should it matter
+to us that the number 4
+
+39
+00:01:48,040 --> 00:01:49,790
+is different from the string 4?
+
+40
+00:01:49,790 --> 00:01:53,260
+Well, up to now, in the
+JavaScript Road Trip courses,
+
+41
+00:01:53,260 --> 00:01:55,990
+we have always known that
+the two values that we'd
+
+42
+00:01:55,990 --> 00:01:58,950
+be comparing would be
+exactly the same type.
+
+43
+00:01:58,950 --> 00:02:00,550
+That was to sort
+of keep it simple
+
+44
+00:02:00,550 --> 00:02:02,780
+for you to understand
+as we moved along.
+
+45
+00:02:02,780 --> 00:02:05,570
+But as you grow in your skills
+as a JavaScript programmer,
+
+46
+00:02:05,570 --> 00:02:06,990
+you're going to
+want to make sure
+
+47
+00:02:06,990 --> 00:02:10,660
+that the types that you get,
+whether from files or from user
+
+48
+00:02:10,660 --> 00:02:13,340
+entry, match what
+you're seeking.
+
+49
+00:02:13,340 --> 00:02:16,680
+And so we need a different
+way to compare types,
+
+50
+00:02:16,680 --> 00:02:19,950
+as well as the values
+contained within those types.
+
+51
+00:02:19,950 --> 00:02:22,240
+Enter the triple
+equals operator.
+
+52
+00:02:22,240 --> 00:02:23,890
+The triple equals
+operator does not
+
+53
+00:02:23,890 --> 00:02:26,650
+ignore the type of
+the value in the way
+
+54
+00:02:26,650 --> 00:02:30,160
+that the double equals operator
+will ignore the type for us.
+
+55
+00:02:30,160 --> 00:02:33,330
+So therefore, we get sort
+of a truer interpretation
+
+56
+00:02:33,330 --> 00:02:35,110
+of the equality here.
+
+57
+00:02:35,110 --> 00:02:36,930
+And JavaScript
+experts will often
+
+58
+00:02:36,930 --> 00:02:39,490
+prefer the triple
+equals operator
+
+59
+00:02:39,490 --> 00:02:42,470
+over the double equals
+operator for this reason.
+
+60
+00:02:42,470 --> 00:02:45,460
+Here, you can see, when we use
+a triple equals on x.value Of()
+
+61
+00:02:45,460 --> 00:02:50,470
+and y.value Of(), we get a false.
+
+62
+00:02:50,470 --> 00:02:54,730
+value Of can be used on all
+native JavaScript data types.
+
+63
+00:02:54,730 --> 00:02:57,530
+So here, if we established a
+variable called a and assigned
+
+64
+00:02:57,530 --> 00:03:00,630
+to it an array that contained
+3, and then "blind",
+
+65
+00:03:00,630 --> 00:03:04,210
+and then "mice", and
+we called a.value Of(),
+
+66
+00:03:04,210 --> 00:03:05,790
+we would just get
+the array back.
+
+67
+00:03:05,790 --> 00:03:08,790
+It's almost like
+logging out the array.
+
+68
+00:03:08,790 --> 00:03:11,350
+Same thing with
+the number object.
+
+69
+00:03:11,350 --> 00:03:12,880
+You can see the
+number constructor
+
+70
+00:03:12,880 --> 00:03:14,480
+being called on 6, over there.
+
+71
+00:03:14,480 --> 00:03:19,930
+And if we logged out the value
+of b, we would just get 6 back.
+
+72
+00:03:19,930 --> 00:03:22,650
+Now, you might look at all
+of these responses and think,
+
+73
+00:03:22,650 --> 00:03:25,060
+they're just giving me
+what the variable contains,
+
+74
+00:03:25,060 --> 00:03:28,240
+so why wouldn't I
+just use the variable?
+
+75
+00:03:28,240 --> 00:03:30,050
+It's true, these
+particular responses
+
+76
+00:03:30,050 --> 00:03:31,552
+are not very interesting.
+
+77
+00:03:31,552 --> 00:03:33,010
+What's interesting,
+though, is when
+
+78
+00:03:33,010 --> 00:03:38,040
+you redefine the value of
+method for a classes prototype.
+
+79
+00:03:38,040 --> 00:03:38,910
+Let's take a look.
+
+80
+00:03:43,320 --> 00:03:47,110
+What happens when we
+call value Of on an object
+
+81
+00:03:47,110 --> 00:03:49,190
+that we make, ourselves?
+
+82
+00:03:49,190 --> 00:03:51,270
+Here, I've declared
+a tornado variable.
+
+83
+00:03:51,270 --> 00:03:53,850
+And I have assigned it
+a function expression.
+
+84
+00:03:53,850 --> 00:03:54,930
+Guess what?
+
+85
+00:03:54,930 --> 00:03:57,792
+Constructors can be
+function expressions, too.
+
+86
+00:03:57,792 --> 00:03:59,500
+I'm going to pass in
+a category - meaning
+
+87
+00:03:59,500 --> 00:04:02,000
+the severity of the
+tornado - as well
+
+88
+00:04:02,000 --> 00:04:03,500
+as the affected
+areas - that's going
+
+89
+00:04:03,500 --> 00:04:06,900
+to be an array of cities -
+and then the maximum wind
+
+90
+00:04:06,900 --> 00:04:09,570
+gusts - that's going to be
+how high the winds travel,
+
+91
+00:04:09,570 --> 00:04:10,970
+in this tornado.
+
+92
+00:04:10,970 --> 00:04:14,310
+Next, I'll need an array
+of the affected areas.
+
+93
+00:04:14,310 --> 00:04:15,590
+We'll call that cities.
+
+94
+00:04:15,590 --> 00:04:19,430
+And inside that array,
+there will be other arrays.
+
+95
+00:04:19,430 --> 00:04:21,670
+In those sub-arrays,
+in the first index
+
+96
+00:04:21,670 --> 00:04:23,890
+will be the city, and
+in the second index will
+
+97
+00:04:23,890 --> 00:04:26,940
+be the population of
+that city, for use later.
+
+98
+00:04:26,940 --> 00:04:30,340
+Now, to create a
+new tornado object,
+
+99
+00:04:30,340 --> 00:04:32,290
+we'll establish a
+twister variable
+
+100
+00:04:32,290 --> 00:04:35,350
+and pass in F5 - very strong.
+
+101
+00:04:35,350 --> 00:04:40,220
+The city's array, as well
+as 220 miles per hour winds.
+
+102
+00:04:40,220 --> 00:04:43,080
+If we were to call
+value Of on our new tornado
+
+103
+00:04:43,080 --> 00:04:48,460
+object, twister, we would get
+a return of a tornado object
+
+104
+00:04:48,460 --> 00:04:52,140
+with a list of all of its
+properties and their values.
+
+105
+00:04:52,140 --> 00:04:54,430
+But look at the
+location property.
+
+106
+00:04:54,430 --> 00:04:55,860
+It says, Array[3].
+
+107
+00:04:55,860 --> 00:04:59,030
+That just tells me I've got an
+array with three entries in it.
+
+108
+00:04:59,030 --> 00:05:00,640
+It doesn't even
+tell me that inside
+
+109
+00:05:00,640 --> 00:05:02,470
+that array is another array.
+
+110
+00:05:02,470 --> 00:05:04,380
+So I don't even know
+what's going on there.
+
+111
+00:05:04,380 --> 00:05:06,180
+In other words, the
+value Of is trying
+
+112
+00:05:06,180 --> 00:05:10,260
+to give me as much information
+as it knows about this object.
+
+113
+00:05:10,260 --> 00:05:13,570
+But we have to be responsible
+for making that value Of
+
+114
+00:05:13,570 --> 00:05:15,240
+method better.
+
+115
+00:05:15,240 --> 00:05:16,330
+How can we do that?
+
+116
+00:05:16,330 --> 00:05:19,869
+By overriding a
+prototype's property.
+
+117
+00:05:19,869 --> 00:05:20,660
+Let's check it out.
+
+118
+00:05:23,780 --> 00:05:26,860
+So why might we override
+prototyping properties?
+
+119
+00:05:26,860 --> 00:05:30,170
+Well, there are many
+situations, as you might expect,
+
+120
+00:05:30,170 --> 00:05:32,760
+that require special
+functionality that's
+
+121
+00:05:32,760 --> 00:05:35,660
+different from the
+first available property
+
+122
+00:05:35,660 --> 00:05:39,330
+with that name inside
+the prototype chain.
+
+123
+00:05:39,330 --> 00:05:42,850
+But we want to caution you
+to think of safety first,
+
+124
+00:05:42,850 --> 00:05:45,720
+in this case, for overriding
+because you want to make sure
+
+125
+00:05:45,720 --> 00:05:47,460
+that you don't
+override a property -
+
+126
+00:05:47,460 --> 00:05:50,710
+let's say, in the object
+prototype level - that
+
+127
+00:05:50,710 --> 00:05:53,290
+will affect all
+objects everywhere -
+
+128
+00:05:53,290 --> 00:05:56,660
+shoes, tornadoes, boxes, books.
+
+129
+00:05:56,660 --> 00:05:59,160
+We don't want that, necessarily,
+for what we're about to do.
+
+130
+00:05:59,160 --> 00:06:03,960
+We just want to override the
+value Of method for tornadoes.
+
+131
+00:06:03,960 --> 00:06:07,740
+So we're going to do that
+inside of the tornado prototype.
+
+132
+00:06:07,740 --> 00:06:09,280
+Let's take a look.
+
+133
+00:06:09,280 --> 00:06:12,360
+So therefore, to get a
+more informative result
+
+134
+00:06:12,360 --> 00:06:14,900
+for the value Of
+method on tornadoes,
+
+135
+00:06:14,900 --> 00:06:18,610
+we just want to modify
+the tornado prototype.
+
+136
+00:06:18,610 --> 00:06:21,010
+So what would be a
+good redefinition
+
+137
+00:06:21,010 --> 00:06:24,080
+of the value Of
+property for tornadoes?
+
+138
+00:06:24,080 --> 00:06:26,760
+How about we make
+it the sum of all
+
+139
+00:06:26,760 --> 00:06:29,000
+of the potential people
+that are affected
+
+140
+00:06:29,000 --> 00:06:31,000
+by this particular tornado?
+
+141
+00:06:31,000 --> 00:06:32,470
+Let's try that.
+
+142
+00:06:32,470 --> 00:06:35,750
+Now, to make sure we only do
+this in the tornado prototype,
+
+143
+00:06:35,750 --> 00:06:38,700
+we're going to call
+tornado.prototype.value Of,
+
+144
+00:06:38,700 --> 00:06:43,120
+which creates a new property
+inside the tornado prototype.
+
+145
+00:06:43,120 --> 00:06:44,630
+Next, we'll assign
+a function to it.
+
+146
+00:06:44,630 --> 00:06:48,290
+And inside that, we'll
+create a sum variable
+
+147
+00:06:48,290 --> 00:06:50,019
+that starts at zero.
+
+148
+00:06:50,019 --> 00:06:51,560
+And then we'll have
+a loop that loops
+
+149
+00:06:51,560 --> 00:06:56,360
+over every array inside
+the cities array.
+
+150
+00:06:56,360 --> 00:06:58,880
+Each time we get to a
+new cell in the array,
+
+151
+00:06:58,880 --> 00:07:00,590
+we'll add the
+population of people
+
+152
+00:07:00,590 --> 00:07:03,300
+associated with that
+city to our sum.
+
+153
+00:07:03,300 --> 00:07:05,690
+And at the very end of
+our value Of function,
+
+154
+00:07:05,690 --> 00:07:08,090
+we will return the
+sum of those people.
+
+155
+00:07:12,620 --> 00:07:15,170
+So now, if we call
+twister.value Of(),
+
+156
+00:07:15,170 --> 00:07:17,580
+we no longer get that big,
+long list of properties
+
+157
+00:07:17,580 --> 00:07:18,620
+in the tornado object.
+
+158
+00:07:18,620 --> 00:07:23,370
+Instead, we get
+641,647 people, which
+
+159
+00:07:23,370 --> 00:07:25,810
+is the sum of all of
+the affected people
+
+160
+00:07:25,810 --> 00:07:27,950
+inside of our affected cities.
+
+161
+00:07:27,950 --> 00:07:30,930
+Take note that the
+value Of is found, now,
+
+162
+00:07:30,930 --> 00:07:32,660
+in the tornado prototype.
+
+163
+00:07:32,660 --> 00:07:36,070
+And that comes before
+the object prototype
+
+164
+00:07:36,070 --> 00:07:37,400
+in the prototype chain.
+
+165
+00:07:37,400 --> 00:07:39,580
+So therefore, the
+value Of method that's
+
+166
+00:07:39,580 --> 00:07:43,592
+still in the object prototype
+never gets even looked at.
+
+167
+00:07:43,592 --> 00:07:45,300
+What's cool about this
+kind of overriding
+
+168
+00:07:45,300 --> 00:07:47,100
+is that our value
+will even update
+
+169
+00:07:47,100 --> 00:07:49,710
+as the cities array is updated.
+
+170
+00:07:49,710 --> 00:07:53,100
+Say the tornado spreads its
+damage to another location
+
+171
+00:07:53,100 --> 00:07:54,860
+and we need to add a city to it.
+
+172
+00:07:54,860 --> 00:07:56,220
+Let's try that.
+
+173
+00:07:56,220 --> 00:07:59,280
+If we tried to push a new
+city into the cities array,
+
+174
+00:07:59,280 --> 00:08:03,890
+with a new population of
+130,045, what happens now,
+
+175
+00:08:03,890 --> 00:08:05,930
+when we call twister.value Of()?
+
+176
+00:08:05,930 --> 00:08:09,380
+We get 771,692.
+
+177
+00:08:09,380 --> 00:08:10,150
+Why is that?
+
+178
+00:08:10,150 --> 00:08:13,020
+That's because since the
+cities array was passed
+
+179
+00:08:13,020 --> 00:08:16,480
+in by reference, we'll
+always get an updated
+
+180
+00:08:16,480 --> 00:08:19,240
+value for that sum every
+time value Of is called.
+
+181
+00:08:19,240 --> 00:08:19,780
+How cool.
+
+182
+00:08:23,030 --> 00:08:26,560
+Moving right along to another
+useful prototype property,
+
+183
+00:08:26,560 --> 00:08:28,800
+this one's called to String.
+
+184
+00:08:28,800 --> 00:08:33,450
+Now, the default responses to
+the objects to String method
+
+185
+00:08:33,450 --> 00:08:35,700
+are often very
+uninteresting, especially
+
+186
+00:08:35,700 --> 00:08:37,940
+on the JavaScript native types.
+
+187
+00:08:37,940 --> 00:08:40,470
+But overriding it can be cool.
+
+188
+00:08:40,470 --> 00:08:43,669
+Let's take a look at what
+the to String method does.
+
+189
+00:08:43,669 --> 00:08:46,020
+Over here, we've got our
+original x and y variables
+
+190
+00:08:46,020 --> 00:08:47,370
+with the same values.
+
+191
+00:08:47,370 --> 00:08:50,240
+And as you might expect,
+calling to String on x just
+
+192
+00:08:50,240 --> 00:08:53,290
+turns the 4 into the string 4.
+
+193
+00:08:53,290 --> 00:08:56,780
+Calling to String on y doesn't
+have much impact, just returns
+
+194
+00:08:56,780 --> 00:08:59,490
+the exact same string.
+
+195
+00:08:59,490 --> 00:09:03,280
+Looking at the array, a call
+to the to String on array
+
+196
+00:09:03,280 --> 00:09:05,830
+will just stringify
+and concatenate
+
+197
+00:09:05,830 --> 00:09:08,470
+all of the contents, but
+separating each entry
+
+198
+00:09:08,470 --> 00:09:10,890
+by a comma, without
+any white space.
+
+199
+00:09:10,890 --> 00:09:14,210
+So overriding to String
+on the array prototype
+
+200
+00:09:14,210 --> 00:09:18,010
+is usually pretty desirable for
+whatever you're trying to do.
+
+201
+00:09:21,050 --> 00:09:22,560
+Additionally, the
+to String method
+
+202
+00:09:22,560 --> 00:09:24,560
+can come in handy on a function.
+
+203
+00:09:24,560 --> 00:09:26,860
+If we established a
+new function here,
+
+204
+00:09:26,860 --> 00:09:28,550
+and assigned it to
+variable, double,
+
+205
+00:09:28,550 --> 00:09:30,710
+and then called
+double.to String(),
+
+206
+00:09:30,710 --> 00:09:32,980
+you can see that the entire
+function is logged out
+
+207
+00:09:32,980 --> 00:09:36,010
+as a string, which can be
+very useful if you ever need
+
+208
+00:09:36,010 --> 00:09:39,930
+to concatenate an entire
+function as a string into some
+
+209
+00:09:39,930 --> 00:09:40,940
+formatted printout.
+
+210
+00:09:44,070 --> 00:09:46,530
+Now, let's go ahead and
+override our to String method
+
+211
+00:09:46,530 --> 00:09:48,450
+inside of our tornado prototype.
+
+212
+00:09:48,450 --> 00:09:51,120
+We want to do something
+cool with our to String
+
+213
+00:09:51,120 --> 00:09:52,594
+method in a tornado.
+
+214
+00:09:52,594 --> 00:09:55,010
+So let's bring back in our
+tornado constructor, as well as
+
+215
+00:09:55,010 --> 00:09:58,020
+our cities and our
+new twister object.
+
+216
+00:09:58,020 --> 00:10:00,830
+And down here, we're going
+to override the to String
+
+217
+00:10:00,830 --> 00:10:03,430
+method inside the
+tornado prototype.
+
+218
+00:10:03,430 --> 00:10:05,980
+You can then see here that
+we assigned it a function
+
+219
+00:10:05,980 --> 00:10:09,310
+inside of which we'll
+start a list variable that
+
+220
+00:10:09,310 --> 00:10:10,570
+is an empty string.
+
+221
+00:10:10,570 --> 00:10:12,430
+What this is going
+to do is hold a list
+
+222
+00:10:12,430 --> 00:10:15,820
+of the affected
+areas in the cities.
+
+223
+00:10:15,820 --> 00:10:21,410
+Then we'll loop over all of the
+arrays inside the cities array.
+
+224
+00:10:21,410 --> 00:10:23,800
+Inside of our loop,
+if we haven't yet
+
+225
+00:10:23,800 --> 00:10:26,040
+reached the last
+city, then we just
+
+226
+00:10:26,040 --> 00:10:29,220
+want to add the name of the
+city and a comma to our list.
+
+227
+00:10:29,220 --> 00:10:33,070
+But if we did reach the
+very last city in our array,
+
+228
+00:10:33,070 --> 00:10:34,820
+we want to use the
+Oxford comma style,
+
+229
+00:10:34,820 --> 00:10:39,020
+and have some good grammar,
+and put and, the last city.
+
+230
+00:10:39,020 --> 00:10:41,120
+Notice here that the
+cities are contained
+
+231
+00:10:41,120 --> 00:10:45,140
+in the zero index
+of each sub-array.
+
+232
+00:10:45,140 --> 00:10:47,950
+Once the loop closes, we'll
+know that our list variable
+
+233
+00:10:47,950 --> 00:10:50,340
+is complete, meaning
+all of the cities
+
+234
+00:10:50,340 --> 00:10:53,840
+have been concatenated
+correctly into one variable.
+
+235
+00:10:53,840 --> 00:10:56,220
+Then we will return this
+rather large string,
+
+236
+00:10:56,220 --> 00:10:59,880
+here, that says, "This tornado
+has been classified as an,"
+
+237
+00:10:59,880 --> 00:11:02,970
+and then we'll put the category
+in for this particular tornado.
+
+238
+00:11:02,970 --> 00:11:06,092
+"With wind gusts up to," and
+we'll put the wind gusts
+
+239
+00:11:06,092 --> 00:11:08,569
+in for this tornado.
+
+240
+00:11:08,569 --> 00:11:09,110
+New sentence.
+
+241
+00:11:09,110 --> 00:11:11,540
+"Affected areas are,"
+and notice now,
+
+242
+00:11:11,540 --> 00:11:13,840
+we concatenate the
+list variable in.
+
+243
+00:11:13,840 --> 00:11:17,950
+That will put all of
+our cities in one spot.
+
+244
+00:11:17,950 --> 00:11:20,600
+"Potentially affecting
+a population of,"
+
+245
+00:11:20,600 --> 00:11:22,380
+and now, this is
+cool - we actually
+
+246
+00:11:22,380 --> 00:11:27,500
+are calling our overridden
+value Of method on this.
+
+247
+00:11:27,500 --> 00:11:30,689
+So we will get the population
+placed right there.
+
+248
+00:11:30,689 --> 00:11:31,480
+Let's check it out.
+
+249
+00:11:35,250 --> 00:11:38,210
+If we call
+twister.to String() now,
+
+250
+00:11:38,210 --> 00:11:40,350
+we get a very cool
+representation of all
+
+251
+00:11:40,350 --> 00:11:43,940
+of the data that's in our
+twister tornado object.
+
+252
+00:11:43,940 --> 00:11:47,060
+It says, this tornado has
+been classified as an F5,
+
+253
+00:11:47,060 --> 00:11:50,210
+with the wind gusts up
+to 220 miles per hour.
+
+254
+00:11:50,210 --> 00:11:56,010
+Affected areas are Kansas City,
+Topeka, Lenexa, and Olethe,
+
+255
+00:11:56,010 --> 00:12:02,200
+potentially affecting a
+population of 771,692.
+
+256
+00:12:02,200 --> 00:12:04,562
+Cool, huh?
+
+257
+00:12:04,562 --> 00:12:06,020
+Next up, we're
+going to try to find
+
+258
+00:12:06,020 --> 00:12:09,050
+an object's constructor
+and its prototype.
+
+259
+00:12:09,050 --> 00:12:11,480
+And there are some inherited
+properties from the object
+
+260
+00:12:11,480 --> 00:12:13,920
+prototype that
+provide ways for us
+
+261
+00:12:13,920 --> 00:12:17,580
+to locate those nearest
+prototype ancestors.
+
+262
+00:12:17,580 --> 00:12:19,120
+Let's check that out.
+
+263
+00:12:19,120 --> 00:12:21,330
+If we call
+twister.constructor here,
+
+264
+00:12:21,330 --> 00:12:26,720
+we get the entire constructor
+function back, as a result.
+
+265
+00:12:26,720 --> 00:12:31,080
+Now, next, if we call
+the .prototype property
+
+266
+00:12:31,080 --> 00:12:36,330
+of the constructor function, we
+will get the prototype object
+
+267
+00:12:36,330 --> 00:12:39,080
+associated with
+that constructor.
+
+268
+00:12:39,080 --> 00:12:40,110
+Pretty cool.
+
+269
+00:12:40,110 --> 00:12:43,480
+So there, we can see both the
+constructor function, as well
+
+270
+00:12:43,480 --> 00:12:48,130
+as the prototype object that
+has our overridden value Of
+
+271
+00:12:48,130 --> 00:12:50,500
+and to String methods.
+
+272
+00:12:50,500 --> 00:12:52,340
+Something useful
+to remember here
+
+273
+00:12:52,340 --> 00:12:55,770
+is that if a prototype object
+is defined for a class,
+
+274
+00:12:55,770 --> 00:12:57,400
+meaning the class
+uses inheritance
+
+275
+00:12:57,400 --> 00:13:00,750
+in some way, that
+prototype will always
+
+276
+00:13:00,750 --> 00:13:04,010
+be a property of the
+class's constructor.
+
+277
+00:13:04,010 --> 00:13:06,220
+And the constructor is just
+another function object
+
+278
+00:13:06,220 --> 00:13:06,969
+of the properties.
+
+279
+00:13:09,610 --> 00:13:12,040
+Another way to access just
+the prototype would be
+
+280
+00:13:12,040 --> 00:13:12,790
+twister.__proto__.
+
+281
+00:13:16,200 --> 00:13:22,030
+Kind of weird, but it will give
+you back the exact prototype
+
+282
+00:13:22,030 --> 00:13:24,020
+object used for twister.
+
+283
+00:13:27,525 --> 00:13:29,400
+Now that you know how
+to access the prototype
+
+284
+00:13:29,400 --> 00:13:30,983
+and the constructor,
+let's take a look
+
+285
+00:13:30,983 --> 00:13:35,610
+at the has Own Property method
+in the object prototype.
+
+286
+00:13:35,610 --> 00:13:37,430
+This method will
+help you identify
+
+287
+00:13:37,430 --> 00:13:41,930
+the location of properties
+where they are stored.
+
+288
+00:13:41,930 --> 00:13:45,540
+Searching the prototype chains
+for potential overridden
+
+289
+00:13:45,540 --> 00:13:47,960
+properties is
+something we do a lot.
+
+290
+00:13:47,960 --> 00:13:50,530
+And it becomes very
+easy with this function.
+
+291
+00:13:50,530 --> 00:13:55,082
+What if we wanted to find the
+owner of a particular property?
+
+292
+00:13:55,082 --> 00:13:56,790
+Well, we can build a
+function to do that.
+
+293
+00:13:56,790 --> 00:13:59,140
+Let's check it out.
+
+294
+00:13:59,140 --> 00:14:03,340
+So what if we wanted to be able
+to find a specific property
+
+295
+00:14:03,340 --> 00:14:05,380
+within an object's
+prototype chain?
+
+296
+00:14:05,380 --> 00:14:06,290
+Hm.
+
+297
+00:14:06,290 --> 00:14:11,090
+We wanted to find which location
+held a specific property.
+
+298
+00:14:11,090 --> 00:14:14,310
+Well, we can add that one
+to the object.prototype.
+
+299
+00:14:14,310 --> 00:14:16,330
+That way, every
+object, everywhere,
+
+300
+00:14:16,330 --> 00:14:18,000
+will be able to
+find any property
+
+301
+00:14:18,000 --> 00:14:19,770
+that we want to look for.
+
+302
+00:14:19,770 --> 00:14:22,686
+So here you can see we're doing
+object.prototype.find Owner Of Property.
+
+303
+00:14:25,010 --> 00:14:27,640
+And then we assign
+it a function.
+
+304
+00:14:27,640 --> 00:14:29,950
+The function takes in, as
+a parameter, the property
+
+305
+00:14:29,950 --> 00:14:31,940
+name that we're looking for.
+
+306
+00:14:31,940 --> 00:14:34,780
+The first thing we'll do is
+establish a variable called
+
+307
+00:14:34,780 --> 00:14:38,920
+current Object which will be
+the object within which we're
+
+308
+00:14:38,920 --> 00:14:41,410
+looking for the
+property, currently.
+
+309
+00:14:41,410 --> 00:14:43,080
+And at first, we
+will assign that
+
+310
+00:14:43,080 --> 00:14:45,780
+to this, which means
+the calling object.
+
+311
+00:14:45,780 --> 00:14:47,930
+We want to start at
+the calling object,
+
+312
+00:14:47,930 --> 00:14:50,540
+to see if the property is there.
+
+313
+00:14:50,540 --> 00:14:53,010
+Next, we'll hook ourselves
+up with a while loop that
+
+314
+00:14:53,010 --> 00:14:55,250
+will keep searching
+the prototype chain
+
+315
+00:14:55,250 --> 00:15:00,420
+until we've tried to go beyond
+the object prototype which
+
+316
+00:15:00,420 --> 00:15:02,750
+has no prototype.
+
+317
+00:15:02,750 --> 00:15:06,200
+So if we tried to access
+the prototype of the object
+
+318
+00:15:06,200 --> 00:15:09,510
+prototype, we would get no
+because object prototype is
+
+319
+00:15:09,510 --> 00:15:12,320
+the highest prototype
+that you can go.
+
+320
+00:15:12,320 --> 00:15:14,000
+Then we'll set up a
+conditional in which
+
+321
+00:15:14,000 --> 00:15:18,750
+we check whether the current
+object, has Own Property,
+
+322
+00:15:18,750 --> 00:15:20,610
+the property name that
+we're looking for.
+
+323
+00:15:20,610 --> 00:15:23,040
+And if it does, we'll
+return that current object.
+
+324
+00:15:23,040 --> 00:15:24,250
+Why?
+
+325
+00:15:24,250 --> 00:15:28,010
+Because if the current
+object has the property name
+
+326
+00:15:28,010 --> 00:15:30,070
+that we're looking
+for, that means
+
+327
+00:15:30,070 --> 00:15:34,260
+it is the closest object,
+in hierarchy, to the calling
+
+328
+00:15:34,260 --> 00:15:37,530
+object, which means
+that's where it gets
+
+329
+00:15:37,530 --> 00:15:41,470
+the method, or the
+property, from.
+
+330
+00:15:41,470 --> 00:15:44,400
+Otherwise, if the currently
+examined object does not
+
+331
+00:15:44,400 --> 00:15:47,100
+contain the property
+that we're looking for,
+
+332
+00:15:47,100 --> 00:15:50,100
+then we need to proceed
+up the prototype chain
+
+333
+00:15:50,100 --> 00:15:51,800
+to find that property.
+
+334
+00:15:51,800 --> 00:15:52,300
+Hm.
+
+335
+00:15:52,300 --> 00:15:53,100
+How do we do that?
+
+336
+00:15:53,100 --> 00:15:56,370
+Well, we say that the
+current object should now
+
+337
+00:15:56,370 --> 00:15:58,500
+be whatever the
+previously looked
+
+338
+00:15:58,500 --> 00:16:01,080
+at object's prototype was.
+
+339
+00:16:01,080 --> 00:16:03,910
+That helps us move up
+the prototype chain.
+
+340
+00:16:03,910 --> 00:16:06,490
+Then, at the end,
+if the loop exits,
+
+341
+00:16:06,490 --> 00:16:11,100
+we know we tried to get past the
+object prototype and hit null.
+
+342
+00:16:11,100 --> 00:16:12,190
+What does that mean?
+
+343
+00:16:12,190 --> 00:16:14,330
+That means we never
+found the property
+
+344
+00:16:14,330 --> 00:16:17,080
+in any of the prototypes
+throughout the chain.
+
+345
+00:16:17,080 --> 00:16:19,860
+So we should go ahead and let
+ourselves know that and say,
+
+346
+00:16:19,860 --> 00:16:22,780
+no property found.
+
+347
+00:16:22,780 --> 00:16:26,570
+So now, if we call the
+find Owner Of Property on twister,
+
+348
+00:16:26,570 --> 00:16:28,810
+with the parameter
+value Of, meaning
+
+349
+00:16:28,810 --> 00:16:31,540
+we're looking for
+the value Of property,
+
+350
+00:16:31,540 --> 00:16:33,630
+well, twister looks inside
+itself, as an object,
+
+351
+00:16:33,630 --> 00:16:36,390
+and doesn't see
+value Of, so it goes up
+
+352
+00:16:36,390 --> 00:16:37,660
+to the tornado prototype.
+
+353
+00:16:37,660 --> 00:16:41,300
+And there it is, the
+value Of function.
+
+354
+00:16:41,300 --> 00:16:45,030
+So our
+find Owner Of Property method
+
+355
+00:16:45,030 --> 00:16:48,970
+returns the entire
+tornado prototype to us
+
+356
+00:16:48,970 --> 00:16:51,540
+as the location of
+the value Of property.
+
+357
+00:16:54,460 --> 00:16:58,930
+Now, if we call our function
+on the go To Oz property, hm.
+
+358
+00:16:58,930 --> 00:17:01,190
+Well, we'll first check
+the twister object.
+
+359
+00:17:01,190 --> 00:17:02,570
+Nothing there.
+
+360
+00:17:02,570 --> 00:17:05,104
+And then we'll head up
+to the tornado prototype.
+
+361
+00:17:05,104 --> 00:17:06,020
+Nothing there, either.
+
+362
+00:17:06,020 --> 00:17:07,460
+Uh oh.
+
+363
+00:17:07,460 --> 00:17:10,490
+So now we'll trudge up
+to the object prototype.
+
+364
+00:17:10,490 --> 00:17:12,400
+Still nothing.
+
+365
+00:17:12,400 --> 00:17:15,190
+Finally, we'll try to get
+past the object prototype,
+
+366
+00:17:15,190 --> 00:17:17,550
+but that prototype is null.
+
+367
+00:17:17,550 --> 00:17:18,720
+Womp, womp.
+
+368
+00:17:18,720 --> 00:17:21,420
+But actually, that's cool
+because our while loop will
+
+369
+00:17:21,420 --> 00:17:25,030
+exit, and we'll get
+no property found.
+
+370
+00:17:25,030 --> 00:17:28,710
+So we see that trying to
+find the go To Oz property
+
+371
+00:17:28,710 --> 00:17:30,730
+shows us that none
+actually exists
+
+372
+00:17:30,730 --> 00:17:34,380
+for this particular tornado,
+which, I have to say,
+
+373
+00:17:34,380 --> 00:17:35,015
+kind of sucks.
+
+374
+00:17:38,760 --> 00:17:41,780
+And that, ladies and gentlemen,
+is the end of a level five,
+
+375
+00:17:41,780 --> 00:17:42,952
+the Plains of Prototypes.
+
+376
+00:17:42,952 --> 00:17:43,910
+Hope you've enjoyed it.
+
+377
+00:17:43,910 --> 00:17:47,270
+We've got a few more
+challenges before the very end.
+
+378
+00:17:47,270 --> 00:17:48,780
+So take some time with those.
+
+379
+00:17:48,780 --> 00:17:51,190
+And we'll see you back for
+more JavaScript real soon.
+
+380
+00:17:51,190 --> 00:17:53,780
+Take care.
+
+381
+00:17:53,780 --> 00:17:55,030
+For example, the -
+
+382
+00:17:55,030 --> 00:17:57,700
+[NONSENSE SYLLABLES]
+
+383
+00:17:57,700 --> 00:17:58,610
+I'm crashing is why.
+
+384
+00:17:58,610 --> 00:17:59,420
+I'm crashing.
+
+385
+00:17:59,420 --> 00:18:00,880
+Crashing, man.
+
+386
+00:18:00,880 --> 00:18:03,800
+Uppercase method.
+
+387
+00:18:03,800 --> 00:18:04,510
+- properties.
+
+388
+00:18:04,510 --> 00:18:05,717
+Well, uh, as -
+
+389
+00:18:05,717 --> 00:18:06,550
+[NONSENSE SYLLABLES]
+
+390
+00:18:06,550 --> 00:18:07,409
+I can't talk.
+
+391
+00:18:07,409 --> 00:18:08,200
+I just can't do it.
+
+392
+00:18:08,200 --> 00:18:09,520
+- method.
+
+393
+00:18:09,520 --> 00:18:10,962
+[FART NOISE]
+
+394
+00:18:10,962 --> 00:18:12,320
+Wah!
+
+395
+00:18:12,320 --> 00:18:16,620
+- all of that get
+pa - if I could talk.
+
+396
+00:18:19,960 --> 00:18:21,960
+Don't put that in there.

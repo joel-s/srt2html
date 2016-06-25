@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>sample/5-3-en.srt</title>
+  <style>
+  .main {
+    margin-top: 30px;
+    max-width: 700px;
+    width: 100%;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  .main h1 {
+    font-family: Arial, sans-serif;
+    font-size:36px;
+  }
+  span.mouseover {
+    border-bottom: 1px dotted #000;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1>sample/5-3-en.srt</h1>
+    <p>
+      <span class="mouseover" title="00:00:02,070">Welcome back, folks,
+to the last section</span>
+      <span class="mouseover" title="00:00:03,920">of the Plains of Prototypes.</span>
+      <span class="mouseover" title="00:00:05,744">Hope you had a great time
+with all of those challenges.</span>
+      <span class="mouseover" title="00:00:08,035">And weren't they a doozy?</span>
+      <span class="mouseover" title="00:00:09,790">Yeah.</span>
+      <span class="mouseover" title="00:00:10,480">Let's turn to our next topic,
+useful properties in the object</span>
+      <span class="mouseover" title="00:00:15,350">prototype.</span>
+      <span class="mouseover" title="00:00:17,040">Yeah, remember all of those
+cool object prototype properties</span>
+      <span class="mouseover" title="00:00:20,370">that we saw at the
+beginning of this level?</span>
+      <span class="mouseover" title="00:00:22,470">We're going to examine and
+use a few of those now.</span>
+      <span class="mouseover" title="00:00:25,430">First one we're going to look
+at is the value of property.</span>
+      <span class="mouseover" title="00:00:28,200">Let's say we had two
+variables, x and y.</span>
+      <span class="mouseover" title="00:00:29,900">One gets assigned 4.</span>
+      <span class="mouseover" title="00:00:31,720">And the other gets
+assigned the string 4.</span>
+      <span class="mouseover" title="00:00:35,090">If we call x.value Of(),
+we'll get that property from</span>
+      <span class="mouseover" title="00:00:38,580">the object prototype, and we
+get a 4 back, as a result.</span>
+      <span class="mouseover" title="00:00:42,130">If we call y.value Of(), we will
+also get the string 4 back.</span>
+      <span class="mouseover" title="00:00:48,150">Now, why are we trying to
+differentiate between these two</span>
+      <span class="mouseover" title="00:00:50,700">pretty obvious things?</span>
+      <span class="mouseover" title="00:00:51,980">We just want to make sure
+you know that the value</span>
+      <span class="mouseover" title="00:00:54,500">in value Of() isn't looking
+for numbers, necessarily,</span>
+      <span class="mouseover" title="00:00:57,750">but instead returns whatever
+primitive type is associated</span>
+      <span class="mouseover" title="00:01:02,430">with the object.</span>
+      <span class="mouseover" title="00:01:03,100">That's going to come
+in handy, pretty soon.</span>
+      <span class="mouseover" title="00:01:06,120">Now, if we try to
+compare x.value Of() equal</span>
+      <span class="mouseover" title="00:01:10,200">to y.value Of(), we get a true.</span>
+      <span class="mouseover" title="00:01:14,110">Why is that?</span>
+      <span class="mouseover" title="00:01:15,370">We need to be careful here.</span>
+      <span class="mouseover" title="00:01:17,010">That's because the double equal
+sign tries to help us out,</span>
+      <span class="mouseover" title="00:01:20,480">tries to be our friend by
+using type coercion which turns</span>
+      <span class="mouseover" title="00:01:25,390">a number contained within a
+string into that actual number.</span>
+      <span class="mouseover" title="00:01:30,680">So here, the 4 that
+was in a string</span>
+      <span class="mouseover" title="00:01:33,480">actually got turned
+into the number 4.</span>
+      <span class="mouseover" title="00:01:36,860">And so the double
+equal sign said,</span>
+      <span class="mouseover" title="00:01:38,590">yes, these things
+are exactly the same.</span>
+      <span class="mouseover" title="00:01:41,330">But we didn't want that.</span>
+      <span class="mouseover" title="00:01:42,510">Sometimes you might,
+but not this time.</span>
+      <span class="mouseover" title="00:01:44,980">So why should it matter
+to us that the number 4</span>
+      <span class="mouseover" title="00:01:48,040">is different from the string 4?</span>
+      <span class="mouseover" title="00:01:49,790">Well, up to now, in the
+JavaScript Road Trip courses,</span>
+      <span class="mouseover" title="00:01:53,260">we have always known that
+the two values that we'd</span>
+      <span class="mouseover" title="00:01:55,990">be comparing would be
+exactly the same type.</span>
+      <span class="mouseover" title="00:01:58,950">That was to sort
+of keep it simple</span>
+      <span class="mouseover" title="00:02:00,550">for you to understand
+as we moved along.</span>
+      <span class="mouseover" title="00:02:02,780">But as you grow in your skills
+as a JavaScript programmer,</span>
+      <span class="mouseover" title="00:02:05,570">you're going to
+want to make sure</span>
+      <span class="mouseover" title="00:02:06,990">that the types that you get,
+whether from files or from user</span>
+      <span class="mouseover" title="00:02:10,660">entry, match what
+you're seeking.</span>
+      <span class="mouseover" title="00:02:13,340">And so we need a different
+way to compare types,</span>
+      <span class="mouseover" title="00:02:16,680">as well as the values
+contained within those types.</span>
+      <span class="mouseover" title="00:02:19,950">Enter the triple
+equals operator.</span>
+      <span class="mouseover" title="00:02:22,240">The triple equals
+operator does not</span>
+      <span class="mouseover" title="00:02:23,890">ignore the type of
+the value in the way</span>
+      <span class="mouseover" title="00:02:26,650">that the double equals operator
+will ignore the type for us.</span>
+      <span class="mouseover" title="00:02:30,160">So therefore, we get sort
+of a truer interpretation</span>
+      <span class="mouseover" title="00:02:33,330">of the equality here.</span>
+      <span class="mouseover" title="00:02:35,110">And JavaScript
+experts will often</span>
+      <span class="mouseover" title="00:02:36,930">prefer the triple
+equals operator</span>
+      <span class="mouseover" title="00:02:39,490">over the double equals
+operator for this reason.</span>
+      <span class="mouseover" title="00:02:42,470">Here, you can see, when we use
+a triple equals on x.value Of()</span>
+      <span class="mouseover" title="00:02:45,460">and y.value Of(), we get a false.</span>
+      <span class="mouseover" title="00:02:50,470">value Of can be used on all
+native JavaScript data types.</span>
+      <span class="mouseover" title="00:02:54,730">So here, if we established a
+variable called a and assigned</span>
+      <span class="mouseover" title="00:02:57,530">to it an array that contained
+3, and then "blind",</span>
+      <span class="mouseover" title="00:03:00,630">and then "mice", and
+we called a.value Of(),</span>
+      <span class="mouseover" title="00:03:04,210">we would just get
+the array back.</span>
+      <span class="mouseover" title="00:03:05,790">It's almost like
+logging out the array.</span>
+      <span class="mouseover" title="00:03:08,790">Same thing with
+the number object.</span>
+      <span class="mouseover" title="00:03:11,350">You can see the
+number constructor</span>
+      <span class="mouseover" title="00:03:12,880">being called on 6, over there.</span>
+      <span class="mouseover" title="00:03:14,480">And if we logged out the value
+of b, we would just get 6 back.</span>
+      <span class="mouseover" title="00:03:19,930">Now, you might look at all
+of these responses and think,</span>
+      <span class="mouseover" title="00:03:22,650">they're just giving me
+what the variable contains,</span>
+      <span class="mouseover" title="00:03:25,060">so why wouldn't I
+just use the variable?</span>
+      <span class="mouseover" title="00:03:28,240">It's true, these
+particular responses</span>
+      <span class="mouseover" title="00:03:30,050">are not very interesting.</span>
+      <span class="mouseover" title="00:03:31,552">What's interesting,
+though, is when</span>
+      <span class="mouseover" title="00:03:33,010">you redefine the value of
+method for a classes prototype.</span>
+      <span class="mouseover" title="00:03:38,040">Let's take a look.</span>
+      <span class="mouseover" title="00:03:43,320">What happens when we
+call value Of on an object</span>
+      <span class="mouseover" title="00:03:47,110">that we make, ourselves?</span>
+      <span class="mouseover" title="00:03:49,190">Here, I've declared
+a tornado variable.</span>
+      <span class="mouseover" title="00:03:51,270">And I have assigned it
+a function expression.</span>
+      <span class="mouseover" title="00:03:53,850">Guess what?</span>
+      <span class="mouseover" title="00:03:54,930">Constructors can be
+function expressions, too.</span>
+      <span class="mouseover" title="00:03:57,792">I'm going to pass in
+a category - meaning</span>
+      <span class="mouseover" title="00:03:59,500">the severity of the
+tornado - as well</span>
+      <span class="mouseover" title="00:04:02,000">as the affected
+areas - that's going</span>
+      <span class="mouseover" title="00:04:03,500">to be an array of cities -
+and then the maximum wind</span>
+      <span class="mouseover" title="00:04:06,900">gusts - that's going to be
+how high the winds travel,</span>
+      <span class="mouseover" title="00:04:09,570">in this tornado.</span>
+      <span class="mouseover" title="00:04:10,970">Next, I'll need an array
+of the affected areas.</span>
+      <span class="mouseover" title="00:04:14,310">We'll call that cities.</span>
+      <span class="mouseover" title="00:04:15,590">And inside that array,
+there will be other arrays.</span>
+      <span class="mouseover" title="00:04:19,430">In those sub-arrays,
+in the first index</span>
+      <span class="mouseover" title="00:04:21,670">will be the city, and
+in the second index will</span>
+      <span class="mouseover" title="00:04:23,890">be the population of
+that city, for use later.</span>
+      <span class="mouseover" title="00:04:26,940">Now, to create a
+new tornado object,</span>
+      <span class="mouseover" title="00:04:30,340">we'll establish a
+twister variable</span>
+      <span class="mouseover" title="00:04:32,290">and pass in F5 - very strong.</span>
+      <span class="mouseover" title="00:04:35,350">The city's array, as well
+as 220 miles per hour winds.</span>
+      <span class="mouseover" title="00:04:40,220">If we were to call
+value Of on our new tornado</span>
+      <span class="mouseover" title="00:04:43,080">object, twister, we would get
+a return of a tornado object</span>
+      <span class="mouseover" title="00:04:48,460">with a list of all of its
+properties and their values.</span>
+      <span class="mouseover" title="00:04:52,140">But look at the
+location property.</span>
+      <span class="mouseover" title="00:04:54,430">It says, Array[3].</span>
+      <span class="mouseover" title="00:04:55,860">That just tells me I've got an
+array with three entries in it.</span>
+      <span class="mouseover" title="00:04:59,030">It doesn't even
+tell me that inside</span>
+      <span class="mouseover" title="00:05:00,640">that array is another array.</span>
+      <span class="mouseover" title="00:05:02,470">So I don't even know
+what's going on there.</span>
+      <span class="mouseover" title="00:05:04,380">In other words, the
+value Of is trying</span>
+      <span class="mouseover" title="00:05:06,180">to give me as much information
+as it knows about this object.</span>
+      <span class="mouseover" title="00:05:10,260">But we have to be responsible
+for making that value Of</span>
+      <span class="mouseover" title="00:05:13,570">method better.</span>
+      <span class="mouseover" title="00:05:15,240">How can we do that?</span>
+      <span class="mouseover" title="00:05:16,330">By overriding a
+prototype's property.</span>
+      <span class="mouseover" title="00:05:19,869">Let's check it out.</span>
+      <span class="mouseover" title="00:05:23,780">So why might we override
+prototyping properties?</span>
+      <span class="mouseover" title="00:05:26,860">Well, there are many
+situations, as you might expect,</span>
+      <span class="mouseover" title="00:05:30,170">that require special
+functionality that's</span>
+      <span class="mouseover" title="00:05:32,760">different from the
+first available property</span>
+      <span class="mouseover" title="00:05:35,660">with that name inside
+the prototype chain.</span>
+      <span class="mouseover" title="00:05:39,330">But we want to caution you
+to think of safety first,</span>
+      <span class="mouseover" title="00:05:42,850">in this case, for overriding
+because you want to make sure</span>
+      <span class="mouseover" title="00:05:45,720">that you don't
+override a property -</span>
+      <span class="mouseover" title="00:05:47,460">let's say, in the object
+prototype level - that</span>
+      <span class="mouseover" title="00:05:50,710">will affect all
+objects everywhere -</span>
+      <span class="mouseover" title="00:05:53,290">shoes, tornadoes, boxes, books.</span>
+      <span class="mouseover" title="00:05:56,660">We don't want that, necessarily,
+for what we're about to do.</span>
+      <span class="mouseover" title="00:05:59,160">We just want to override the
+value Of method for tornadoes.</span>
+      <span class="mouseover" title="00:06:03,960">So we're going to do that
+inside of the tornado prototype.</span>
+      <span class="mouseover" title="00:06:07,740">Let's take a look.</span>
+      <span class="mouseover" title="00:06:09,280">So therefore, to get a
+more informative result</span>
+      <span class="mouseover" title="00:06:12,360">for the value Of
+method on tornadoes,</span>
+      <span class="mouseover" title="00:06:14,900">we just want to modify
+the tornado prototype.</span>
+      <span class="mouseover" title="00:06:18,610">So what would be a
+good redefinition</span>
+      <span class="mouseover" title="00:06:21,010">of the value Of
+property for tornadoes?</span>
+      <span class="mouseover" title="00:06:24,080">How about we make
+it the sum of all</span>
+      <span class="mouseover" title="00:06:26,760">of the potential people
+that are affected</span>
+      <span class="mouseover" title="00:06:29,000">by this particular tornado?</span>
+      <span class="mouseover" title="00:06:31,000">Let's try that.</span>
+      <span class="mouseover" title="00:06:32,470">Now, to make sure we only do
+this in the tornado prototype,</span>
+      <span class="mouseover" title="00:06:35,750">we're going to call
+tornado.prototype.value Of,</span>
+      <span class="mouseover" title="00:06:38,700">which creates a new property
+inside the tornado prototype.</span>
+      <span class="mouseover" title="00:06:43,120">Next, we'll assign
+a function to it.</span>
+      <span class="mouseover" title="00:06:44,630">And inside that, we'll
+create a sum variable</span>
+      <span class="mouseover" title="00:06:48,290">that starts at zero.</span>
+      <span class="mouseover" title="00:06:50,019">And then we'll have
+a loop that loops</span>
+      <span class="mouseover" title="00:06:51,560">over every array inside
+the cities array.</span>
+      <span class="mouseover" title="00:06:56,360">Each time we get to a
+new cell in the array,</span>
+      <span class="mouseover" title="00:06:58,880">we'll add the
+population of people</span>
+      <span class="mouseover" title="00:07:00,590">associated with that
+city to our sum.</span>
+      <span class="mouseover" title="00:07:03,300">And at the very end of
+our value Of function,</span>
+      <span class="mouseover" title="00:07:05,690">we will return the
+sum of those people.</span>
+      <span class="mouseover" title="00:07:12,620">So now, if we call
+twister.value Of(),</span>
+      <span class="mouseover" title="00:07:15,170">we no longer get that big,
+long list of properties</span>
+      <span class="mouseover" title="00:07:17,580">in the tornado object.</span>
+      <span class="mouseover" title="00:07:18,620">Instead, we get
+641,647 people, which</span>
+      <span class="mouseover" title="00:07:23,370">is the sum of all of
+the affected people</span>
+      <span class="mouseover" title="00:07:25,810">inside of our affected cities.</span>
+      <span class="mouseover" title="00:07:27,950">Take note that the
+value Of is found, now,</span>
+      <span class="mouseover" title="00:07:30,930">in the tornado prototype.</span>
+      <span class="mouseover" title="00:07:32,660">And that comes before
+the object prototype</span>
+      <span class="mouseover" title="00:07:36,070">in the prototype chain.</span>
+      <span class="mouseover" title="00:07:37,400">So therefore, the
+value Of method that's</span>
+      <span class="mouseover" title="00:07:39,580">still in the object prototype
+never gets even looked at.</span>
+      <span class="mouseover" title="00:07:43,592">What's cool about this
+kind of overriding</span>
+      <span class="mouseover" title="00:07:45,300">is that our value
+will even update</span>
+      <span class="mouseover" title="00:07:47,100">as the cities array is updated.</span>
+      <span class="mouseover" title="00:07:49,710">Say the tornado spreads its
+damage to another location</span>
+      <span class="mouseover" title="00:07:53,100">and we need to add a city to it.</span>
+      <span class="mouseover" title="00:07:54,860">Let's try that.</span>
+      <span class="mouseover" title="00:07:56,220">If we tried to push a new
+city into the cities array,</span>
+      <span class="mouseover" title="00:07:59,280">with a new population of
+130,045, what happens now,</span>
+      <span class="mouseover" title="00:08:03,890">when we call twister.value Of()?</span>
+      <span class="mouseover" title="00:08:05,930">We get 771,692.</span>
+      <span class="mouseover" title="00:08:09,380">Why is that?</span>
+      <span class="mouseover" title="00:08:10,150">That's because since the
+cities array was passed</span>
+      <span class="mouseover" title="00:08:13,020">in by reference, we'll
+always get an updated</span>
+      <span class="mouseover" title="00:08:16,480">value for that sum every
+time value Of is called.</span>
+      <span class="mouseover" title="00:08:19,240">How cool.</span>
+      <span class="mouseover" title="00:08:23,030">Moving right along to another
+useful prototype property,</span>
+      <span class="mouseover" title="00:08:26,560">this one's called to String.</span>
+      <span class="mouseover" title="00:08:28,800">Now, the default responses to
+the objects to String method</span>
+      <span class="mouseover" title="00:08:33,450">are often very
+uninteresting, especially</span>
+      <span class="mouseover" title="00:08:35,700">on the JavaScript native types.</span>
+      <span class="mouseover" title="00:08:37,940">But overriding it can be cool.</span>
+      <span class="mouseover" title="00:08:40,470">Let's take a look at what
+the to String method does.</span>
+      <span class="mouseover" title="00:08:43,669">Over here, we've got our
+original x and y variables</span>
+      <span class="mouseover" title="00:08:46,020">with the same values.</span>
+      <span class="mouseover" title="00:08:47,370">And as you might expect,
+calling to String on x just</span>
+      <span class="mouseover" title="00:08:50,240">turns the 4 into the string 4.</span>
+      <span class="mouseover" title="00:08:53,290">Calling to String on y doesn't
+have much impact, just returns</span>
+      <span class="mouseover" title="00:08:56,780">the exact same string.</span>
+      <span class="mouseover" title="00:08:59,490">Looking at the array, a call
+to the to String on array</span>
+      <span class="mouseover" title="00:09:03,280">will just stringify
+and concatenate</span>
+      <span class="mouseover" title="00:09:05,830">all of the contents, but
+separating each entry</span>
+      <span class="mouseover" title="00:09:08,470">by a comma, without
+any white space.</span>
+      <span class="mouseover" title="00:09:10,890">So overriding to String
+on the array prototype</span>
+      <span class="mouseover" title="00:09:14,210">is usually pretty desirable for
+whatever you're trying to do.</span>
+      <span class="mouseover" title="00:09:21,050">Additionally, the
+to String method</span>
+      <span class="mouseover" title="00:09:22,560">can come in handy on a function.</span>
+      <span class="mouseover" title="00:09:24,560">If we established a
+new function here,</span>
+      <span class="mouseover" title="00:09:26,860">and assigned it to
+variable, double,</span>
+      <span class="mouseover" title="00:09:28,550">and then called
+double.to String(),</span>
+      <span class="mouseover" title="00:09:30,710">you can see that the entire
+function is logged out</span>
+      <span class="mouseover" title="00:09:32,980">as a string, which can be
+very useful if you ever need</span>
+      <span class="mouseover" title="00:09:36,010">to concatenate an entire
+function as a string into some</span>
+      <span class="mouseover" title="00:09:39,930">formatted printout.</span>
+      <span class="mouseover" title="00:09:44,070">Now, let's go ahead and
+override our to String method</span>
+      <span class="mouseover" title="00:09:46,530">inside of our tornado prototype.</span>
+      <span class="mouseover" title="00:09:48,450">We want to do something
+cool with our to String</span>
+      <span class="mouseover" title="00:09:51,120">method in a tornado.</span>
+      <span class="mouseover" title="00:09:52,594">So let's bring back in our
+tornado constructor, as well as</span>
+      <span class="mouseover" title="00:09:55,010">our cities and our
+new twister object.</span>
+      <span class="mouseover" title="00:09:58,020">And down here, we're going
+to override the to String</span>
+      <span class="mouseover" title="00:10:00,830">method inside the
+tornado prototype.</span>
+      <span class="mouseover" title="00:10:03,430">You can then see here that
+we assigned it a function</span>
+      <span class="mouseover" title="00:10:05,980">inside of which we'll
+start a list variable that</span>
+      <span class="mouseover" title="00:10:09,310">is an empty string.</span>
+      <span class="mouseover" title="00:10:10,570">What this is going
+to do is hold a list</span>
+      <span class="mouseover" title="00:10:12,430">of the affected
+areas in the cities.</span>
+      <span class="mouseover" title="00:10:15,820">Then we'll loop over all of the
+arrays inside the cities array.</span>
+      <span class="mouseover" title="00:10:21,410">Inside of our loop,
+if we haven't yet</span>
+      <span class="mouseover" title="00:10:23,800">reached the last
+city, then we just</span>
+      <span class="mouseover" title="00:10:26,040">want to add the name of the
+city and a comma to our list.</span>
+      <span class="mouseover" title="00:10:29,220">But if we did reach the
+very last city in our array,</span>
+      <span class="mouseover" title="00:10:33,070">we want to use the
+Oxford comma style,</span>
+      <span class="mouseover" title="00:10:34,820">and have some good grammar,
+and put and, the last city.</span>
+      <span class="mouseover" title="00:10:39,020">Notice here that the
+cities are contained</span>
+      <span class="mouseover" title="00:10:41,120">in the zero index
+of each sub-array.</span>
+      <span class="mouseover" title="00:10:45,140">Once the loop closes, we'll
+know that our list variable</span>
+      <span class="mouseover" title="00:10:47,950">is complete, meaning
+all of the cities</span>
+      <span class="mouseover" title="00:10:50,340">have been concatenated
+correctly into one variable.</span>
+      <span class="mouseover" title="00:10:53,840">Then we will return this
+rather large string,</span>
+      <span class="mouseover" title="00:10:56,220">here, that says, "This tornado
+has been classified as an,"</span>
+      <span class="mouseover" title="00:10:59,880">and then we'll put the category
+in for this particular tornado.</span>
+      <span class="mouseover" title="00:11:02,970">"With wind gusts up to," and
+we'll put the wind gusts</span>
+      <span class="mouseover" title="00:11:06,092">in for this tornado.</span>
+      <span class="mouseover" title="00:11:08,569">New sentence.</span>
+      <span class="mouseover" title="00:11:09,110">"Affected areas are,"
+and notice now,</span>
+      <span class="mouseover" title="00:11:11,540">we concatenate the
+list variable in.</span>
+      <span class="mouseover" title="00:11:13,840">That will put all of
+our cities in one spot.</span>
+      <span class="mouseover" title="00:11:17,950">"Potentially affecting
+a population of,"</span>
+      <span class="mouseover" title="00:11:20,600">and now, this is
+cool - we actually</span>
+      <span class="mouseover" title="00:11:22,380">are calling our overridden
+value Of method on this.</span>
+      <span class="mouseover" title="00:11:27,500">So we will get the population
+placed right there.</span>
+      <span class="mouseover" title="00:11:30,689">Let's check it out.</span>
+      <span class="mouseover" title="00:11:35,250">If we call
+twister.to String() now,</span>
+      <span class="mouseover" title="00:11:38,210">we get a very cool
+representation of all</span>
+      <span class="mouseover" title="00:11:40,350">of the data that's in our
+twister tornado object.</span>
+      <span class="mouseover" title="00:11:43,940">It says, this tornado has
+been classified as an F5,</span>
+      <span class="mouseover" title="00:11:47,060">with the wind gusts up
+to 220 miles per hour.</span>
+      <span class="mouseover" title="00:11:50,210">Affected areas are Kansas City,
+Topeka, Lenexa, and Olethe,</span>
+      <span class="mouseover" title="00:11:56,010">potentially affecting a
+population of 771,692.</span>
+      <span class="mouseover" title="00:12:02,200">Cool, huh?</span>
+      <span class="mouseover" title="00:12:04,562">Next up, we're
+going to try to find</span>
+      <span class="mouseover" title="00:12:06,020">an object's constructor
+and its prototype.</span>
+      <span class="mouseover" title="00:12:09,050">And there are some inherited
+properties from the object</span>
+      <span class="mouseover" title="00:12:11,480">prototype that
+provide ways for us</span>
+      <span class="mouseover" title="00:12:13,920">to locate those nearest
+prototype ancestors.</span>
+      <span class="mouseover" title="00:12:17,580">Let's check that out.</span>
+      <span class="mouseover" title="00:12:19,120">If we call
+twister.constructor here,</span>
+      <span class="mouseover" title="00:12:21,330">we get the entire constructor
+function back, as a result.</span>
+      <span class="mouseover" title="00:12:26,720">Now, next, if we call
+the .prototype property</span>
+      <span class="mouseover" title="00:12:31,080">of the constructor function, we
+will get the prototype object</span>
+      <span class="mouseover" title="00:12:36,330">associated with
+that constructor.</span>
+      <span class="mouseover" title="00:12:39,080">Pretty cool.</span>
+      <span class="mouseover" title="00:12:40,110">So there, we can see both the
+constructor function, as well</span>
+      <span class="mouseover" title="00:12:43,480">as the prototype object that
+has our overridden value Of</span>
+      <span class="mouseover" title="00:12:48,130">and to String methods.</span>
+      <span class="mouseover" title="00:12:50,500">Something useful
+to remember here</span>
+      <span class="mouseover" title="00:12:52,340">is that if a prototype object
+is defined for a class,</span>
+      <span class="mouseover" title="00:12:55,770">meaning the class
+uses inheritance</span>
+      <span class="mouseover" title="00:12:57,400">in some way, that
+prototype will always</span>
+      <span class="mouseover" title="00:13:00,750">be a property of the
+class's constructor.</span>
+      <span class="mouseover" title="00:13:04,010">And the constructor is just
+another function object</span>
+      <span class="mouseover" title="00:13:06,220">of the properties.</span>
+      <span class="mouseover" title="00:13:09,610">Another way to access just
+the prototype would be</span>
+      <span class="mouseover" title="00:13:12,040">twister.__proto__.</span>
+      <span class="mouseover" title="00:13:16,200">Kind of weird, but it will give
+you back the exact prototype</span>
+      <span class="mouseover" title="00:13:22,030">object used for twister.</span>
+      <span class="mouseover" title="00:13:27,525">Now that you know how
+to access the prototype</span>
+      <span class="mouseover" title="00:13:29,400">and the constructor,
+let's take a look</span>
+      <span class="mouseover" title="00:13:30,983">at the has Own Property method
+in the object prototype.</span>
+      <span class="mouseover" title="00:13:35,610">This method will
+help you identify</span>
+      <span class="mouseover" title="00:13:37,430">the location of properties
+where they are stored.</span>
+      <span class="mouseover" title="00:13:41,930">Searching the prototype chains
+for potential overridden</span>
+      <span class="mouseover" title="00:13:45,540">properties is
+something we do a lot.</span>
+      <span class="mouseover" title="00:13:47,960">And it becomes very
+easy with this function.</span>
+      <span class="mouseover" title="00:13:50,530">What if we wanted to find the
+owner of a particular property?</span>
+      <span class="mouseover" title="00:13:55,082">Well, we can build a
+function to do that.</span>
+      <span class="mouseover" title="00:13:56,790">Let's check it out.</span>
+      <span class="mouseover" title="00:13:59,140">So what if we wanted to be able
+to find a specific property</span>
+      <span class="mouseover" title="00:14:03,340">within an object's
+prototype chain?</span>
+      <span class="mouseover" title="00:14:05,380">Hm.</span>
+      <span class="mouseover" title="00:14:06,290">We wanted to find which location
+held a specific property.</span>
+      <span class="mouseover" title="00:14:11,090">Well, we can add that one
+to the object.prototype.</span>
+      <span class="mouseover" title="00:14:14,310">That way, every
+object, everywhere,</span>
+      <span class="mouseover" title="00:14:16,330">will be able to
+find any property</span>
+      <span class="mouseover" title="00:14:18,000">that we want to look for.</span>
+      <span class="mouseover" title="00:14:19,770">So here you can see we're doing
+object.prototype.find Owner Of Property.</span>
+      <span class="mouseover" title="00:14:25,010">And then we assign
+it a function.</span>
+      <span class="mouseover" title="00:14:27,640">The function takes in, as
+a parameter, the property</span>
+      <span class="mouseover" title="00:14:29,950">name that we're looking for.</span>
+      <span class="mouseover" title="00:14:31,940">The first thing we'll do is
+establish a variable called</span>
+      <span class="mouseover" title="00:14:34,780">current Object which will be
+the object within which we're</span>
+      <span class="mouseover" title="00:14:38,920">looking for the
+property, currently.</span>
+      <span class="mouseover" title="00:14:41,410">And at first, we
+will assign that</span>
+      <span class="mouseover" title="00:14:43,080">to this, which means
+the calling object.</span>
+      <span class="mouseover" title="00:14:45,780">We want to start at
+the calling object,</span>
+      <span class="mouseover" title="00:14:47,930">to see if the property is there.</span>
+      <span class="mouseover" title="00:14:50,540">Next, we'll hook ourselves
+up with a while loop that</span>
+      <span class="mouseover" title="00:14:53,010">will keep searching
+the prototype chain</span>
+      <span class="mouseover" title="00:14:55,250">until we've tried to go beyond
+the object prototype which</span>
+      <span class="mouseover" title="00:15:00,420">has no prototype.</span>
+      <span class="mouseover" title="00:15:02,750">So if we tried to access
+the prototype of the object</span>
+      <span class="mouseover" title="00:15:06,200">prototype, we would get no
+because object prototype is</span>
+      <span class="mouseover" title="00:15:09,510">the highest prototype
+that you can go.</span>
+      <span class="mouseover" title="00:15:12,320">Then we'll set up a
+conditional in which</span>
+      <span class="mouseover" title="00:15:14,000">we check whether the current
+object, has Own Property,</span>
+      <span class="mouseover" title="00:15:18,750">the property name that
+we're looking for.</span>
+      <span class="mouseover" title="00:15:20,610">And if it does, we'll
+return that current object.</span>
+      <span class="mouseover" title="00:15:23,040">Why?</span>
+      <span class="mouseover" title="00:15:24,250">Because if the current
+object has the property name</span>
+      <span class="mouseover" title="00:15:28,010">that we're looking
+for, that means</span>
+      <span class="mouseover" title="00:15:30,070">it is the closest object,
+in hierarchy, to the calling</span>
+      <span class="mouseover" title="00:15:34,260">object, which means
+that's where it gets</span>
+      <span class="mouseover" title="00:15:37,530">the method, or the
+property, from.</span>
+      <span class="mouseover" title="00:15:41,470">Otherwise, if the currently
+examined object does not</span>
+      <span class="mouseover" title="00:15:44,400">contain the property
+that we're looking for,</span>
+      <span class="mouseover" title="00:15:47,100">then we need to proceed
+up the prototype chain</span>
+      <span class="mouseover" title="00:15:50,100">to find that property.</span>
+      <span class="mouseover" title="00:15:51,800">Hm.</span>
+      <span class="mouseover" title="00:15:52,300">How do we do that?</span>
+      <span class="mouseover" title="00:15:53,100">Well, we say that the
+current object should now</span>
+      <span class="mouseover" title="00:15:56,370">be whatever the
+previously looked</span>
+      <span class="mouseover" title="00:15:58,500">at object's prototype was.</span>
+      <span class="mouseover" title="00:16:01,080">That helps us move up
+the prototype chain.</span>
+      <span class="mouseover" title="00:16:03,910">Then, at the end,
+if the loop exits,</span>
+      <span class="mouseover" title="00:16:06,490">we know we tried to get past the
+object prototype and hit null.</span>
+      <span class="mouseover" title="00:16:11,100">What does that mean?</span>
+      <span class="mouseover" title="00:16:12,190">That means we never
+found the property</span>
+      <span class="mouseover" title="00:16:14,330">in any of the prototypes
+throughout the chain.</span>
+      <span class="mouseover" title="00:16:17,080">So we should go ahead and let
+ourselves know that and say,</span>
+      <span class="mouseover" title="00:16:19,860">no property found.</span>
+      <span class="mouseover" title="00:16:22,780">So now, if we call the
+find Owner Of Property on twister,</span>
+      <span class="mouseover" title="00:16:26,570">with the parameter
+value Of, meaning</span>
+      <span class="mouseover" title="00:16:28,810">we're looking for
+the value Of property,</span>
+      <span class="mouseover" title="00:16:31,540">well, twister looks inside
+itself, as an object,</span>
+      <span class="mouseover" title="00:16:33,630">and doesn't see
+value Of, so it goes up</span>
+      <span class="mouseover" title="00:16:36,390">to the tornado prototype.</span>
+      <span class="mouseover" title="00:16:37,660">And there it is, the
+value Of function.</span>
+      <span class="mouseover" title="00:16:41,300">So our
+find Owner Of Property method</span>
+      <span class="mouseover" title="00:16:45,030">returns the entire
+tornado prototype to us</span>
+      <span class="mouseover" title="00:16:48,970">as the location of
+the value Of property.</span>
+      <span class="mouseover" title="00:16:54,460">Now, if we call our function
+on the go To Oz property, hm.</span>
+      <span class="mouseover" title="00:16:58,930">Well, we'll first check
+the twister object.</span>
+      <span class="mouseover" title="00:17:01,190">Nothing there.</span>
+      <span class="mouseover" title="00:17:02,570">And then we'll head up
+to the tornado prototype.</span>
+      <span class="mouseover" title="00:17:05,104">Nothing there, either.</span>
+      <span class="mouseover" title="00:17:06,020">Uh oh.</span>
+      <span class="mouseover" title="00:17:07,460">So now we'll trudge up
+to the object prototype.</span>
+      <span class="mouseover" title="00:17:10,490">Still nothing.</span>
+      <span class="mouseover" title="00:17:12,400">Finally, we'll try to get
+past the object prototype,</span>
+      <span class="mouseover" title="00:17:15,190">but that prototype is null.</span>
+      <span class="mouseover" title="00:17:17,550">Womp, womp.</span>
+      <span class="mouseover" title="00:17:18,720">But actually, that's cool
+because our while loop will</span>
+      <span class="mouseover" title="00:17:21,420">exit, and we'll get
+no property found.</span>
+      <span class="mouseover" title="00:17:25,030">So we see that trying to
+find the go To Oz property</span>
+      <span class="mouseover" title="00:17:28,710">shows us that none
+actually exists</span>
+      <span class="mouseover" title="00:17:30,730">for this particular tornado,
+which, I have to say,</span>
+      <span class="mouseover" title="00:17:34,380">kind of sucks.</span>
+      <span class="mouseover" title="00:17:38,760">And that, ladies and gentlemen,
+is the end of a level five,</span>
+      <span class="mouseover" title="00:17:41,780">the Plains of Prototypes.</span>
+      <span class="mouseover" title="00:17:42,952">Hope you've enjoyed it.</span>
+      <span class="mouseover" title="00:17:43,910">We've got a few more
+challenges before the very end.</span>
+      <span class="mouseover" title="00:17:47,270">So take some time with those.</span>
+      <span class="mouseover" title="00:17:48,780">And we'll see you back for
+more JavaScript real soon.</span>
+      <span class="mouseover" title="00:17:51,190">Take care.</span>
+      <span class="mouseover" title="00:17:53,780">For example, the -</span>
+      <span class="mouseover" title="00:17:55,030">[NONSENSE SYLLABLES]</span>
+      <span class="mouseover" title="00:17:57,700">I'm crashing is why.</span>
+      <span class="mouseover" title="00:17:58,610">I'm crashing.</span>
+      <span class="mouseover" title="00:17:59,420">Crashing, man.</span>
+      <span class="mouseover" title="00:18:00,880">Uppercase method.</span>
+      <span class="mouseover" title="00:18:03,800">- properties.</span>
+      <span class="mouseover" title="00:18:04,510">Well, uh, as -</span>
+      <span class="mouseover" title="00:18:05,717">[NONSENSE SYLLABLES]</span>
+      <span class="mouseover" title="00:18:06,550">I can't talk.</span>
+      <span class="mouseover" title="00:18:07,409">I just can't do it.</span>
+      <span class="mouseover" title="00:18:08,200">- method.</span>
+      <span class="mouseover" title="00:18:09,520">[FART NOISE]</span>
+      <span class="mouseover" title="00:18:10,962">Wah!</span>
+      <span class="mouseover" title="00:18:12,320">- all of that get
+pa - if I could talk.</span>
+      <span class="mouseover" title="00:18:19,960">Don't put that in there.</span>
+    </p>
+  </div>
+</body>
+
+</html>
