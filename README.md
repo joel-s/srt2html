@@ -12,8 +12,8 @@ Convert a single file.
 
 From this directory, run `python3 process_srt_file.py <filename>` to print HTML.
 
-For examples of typical SRT (input) and HTML (output) files, see the `samples`
-directory.
+For examples of typical SRT (input) and HTML (output) files, see the
+[sample](sample) directory.
 
 ## Directory tree conversion
 
